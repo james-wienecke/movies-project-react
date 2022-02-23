@@ -17,7 +17,7 @@ describe('MovieCard', () => {
         const movieCard = screen.getByTestId('movie-card');
         const movieTitle = screen.getByText(`Title ${movie.title}`);
         const movieYear = screen.getByText(`Year ${movie.year}`);
-        const movieImgAlt = screen.getAllByAltText(`${movie.title} promo poster`);
+        const movieImgAlt = screen.getByAltText(`${movie.title} promo poster`);
 
         expect(movieTitle).toBeInTheDocument();
         expect(movieYear).toBeInTheDocument();
