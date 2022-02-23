@@ -14,10 +14,13 @@ beforeEach(() => {
 describe('MovieCard', () => {
     it('should display a movie card featuring the movie title, year, and image with a poster set in its src attribute', async () => {
         render(<MovieCard movie={movie} />);
-        const card = screen.getByTestId('movie-card');
+        const movieCard = screen.getByTestId('movie-card');
+        const movieTitle = screen.getByText(`Title ${movie.title}`);
+        const movieYear = screen.getByText(`Year ${movie.year}`);
+        const movieImgAlt = screen.getAllByAltText(`${movie.title} promo poster`);
 
-        expect(card.querySelector('.movie-title').textContent).toBe(`Title ${movie.title}`);
-        expect(card.querySelector('.movie-poster').src).toBe(movie.poster);
-        expect(card.querySelector('.movie-year').textContent).toBe(`Year ${movie.year}`);
+        expect(movieTitle).toBeInTheDocument();
+        expect(movieYear).toBeInTheDocument();
+        expect(movieImgAlt).toBeInTheDocument();
     });
 });
