@@ -9,7 +9,7 @@ const MovieGrid = () => {
     const [ movies, setMovies ] = useState<Movie[]>([]);
 
     useEffect(() => {
-        if (movies.length = 0) {
+        if (movies.length == 0) {
             setLoading(true);
             store.fetchMovies().then((res) => {
                 setMovies(res);
@@ -28,7 +28,7 @@ const MovieGrid = () => {
     }
 
     return (
-        <Container>
+        <Container data-testid="movie-grid">
             {displayController()}
         </Container>
     );
