@@ -3,7 +3,7 @@ import './App.css';
 
 import {Container} from "react-bootstrap";
 import NavBar from "./header/NavBar";
-import MovieGrid from "./main/MovieGrid";
+import MovieGrid from "./MovieGrid/MovieGrid";
 
 
 function App() {

@@ -7,13 +7,13 @@ export default function NavBar() {
         <Navbar bg="light" expand="lg">
             <Container>
                 <Navbar.Brand>
-                    <Link to={"/"}>Movies</Link>
+                    <Nav.Item>Movies</Nav.Item>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbar" />
                 <Navbar.Collapse id="navbar">
                     <Nav className="me-auto">
                         <Nav.Item>
-                            <Link to={"/add"}>Add Movie</Link>
+                            <Nav.Item>Add Movie</Nav.Item>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
